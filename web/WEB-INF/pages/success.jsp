@@ -11,6 +11,6 @@
     <title>hello springMVC</title>
   </head>
   <body>
-    <a href="hello">hello springMVC</a>
+    <h4>Success Page</h4>
   </body>
 </html>
