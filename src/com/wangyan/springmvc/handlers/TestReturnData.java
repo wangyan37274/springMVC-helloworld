@@ -61,8 +61,13 @@ public class TestReturnData {
     @RequestMapping("/testSessionAttributes")
     public String testSessionAttributes(Map<String,Object> map){
         User user = new User(1,"wangyan","123","wangyan.com",12,null);
+        /**
+         * 参数中的map，是模型对象，最后放到request域中；
+         * 由于类上有@SessionAttributes(value = {"user"},types = {String.class})注解
+         * 相当于在服务端new session对象，并把设置session对象属性，user=user，school=ligong
+         */
         map.put("user",user);//对应session中的user
-        map.put("school","ligogn");//对应session的String.class
+        map.put("school","ligong");//对应session的String.class
         return SUCCESS;
     }
 
